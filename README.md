@@ -24,7 +24,114 @@ g++ classwork.cpp -o output
 * Make a calculator program using if-statements (or nested if-statements).
 * Feel free to add more options
 * For division, make sure that you never divide by 0.  If the user enters 0 to divide by, display an error message.
+* For the square root, make sure that you do not take the square root of a negative number.  Display an error message when the user tries to take the square root of a negative number.
 * Display an error message when the user enters an invalid input
 
+# Sample Solution
+```c++
+#include <cmath>     // abs, sqrt, pow
+#include <cstdlib>   // srand, rand
+#include <ctime>     // time
+#include <iostream>  // std::cin, std::cout, std::getline
+#include <string>    // std::string
 
+int main()
+{
+  srand(time(0));  // seeding our random number generator
 
+  int user_input = 0;
+  int num1;
+  int num2;
+  double numerator;
+  double denominator;
+  while (user_input != 99)
+  {
+    std::cout << "Welcome to C++ Calculator! Choose an option below!\n"
+              << "0. Roll a dice\n"        
+              << "1. Add\n"
+              << "2. Subtract\n"
+              << "3. Multiply\n"
+              << "4. Divide\n"
+              << "5. Square root\n"
+              << "99. Quit\n> ";
+
+    std::cin >> user_input;
+    
+    if (user_input == 0)
+    {
+      int random_number = (rand() % 6) + 1;  // random numbers between 1 and 6
+      std::cout << "You rolled a " << random_number << std::endl;
+    }
+    else
+    {
+      if (user_input == 1)
+      {
+        std::cout << "Enter two numbers\n";
+        std::cin >> num1 >> num2;
+        std::cout << "Their sum is " << (num1 + num2) << std::endl;
+      }
+      else
+      {
+        if (user_input == 2)
+        {
+          std::cout << "Enter two numbers\n";
+          std::cin >> num1 >> num2;
+          std::cout << "Their difference is " << (num1 - num2) << std::endl;
+        }
+        else
+        {
+          if (user_input == 3)
+          {
+            std::cout << "Enter two numbers\n";
+            std::cin >> num1 >> num2;
+            std::cout << "Their product is " << (num1 * num2) << std::endl;
+          }
+          else
+          {
+            if (user_input == 4)
+            {
+              std::cout << "Enter two numbers\n";
+              std::cin >> numerator >> denominator;
+              if (denominator == 0)
+              {
+                std::cout << "Error: Division by zero is not allowed.\n";
+              }
+              else
+              {
+                std::cout << "Their quotient is " << (numerator / denominator) << std::endl;
+              }
+            }
+            else
+            {
+              if (user_input == 5)
+              {
+                double num1;
+                std::cout << "Enter a number\n";
+                std::cin >> num1;
+                if (num1 < 0)
+                {
+                  std::cout << "Error: Cannot compute square root of a negative number.\n";
+                }
+                else
+                {
+                  std::cout << "The square root of " << num1 << " is " << sqrt(num1) << std::endl;
+                }
+              }
+              else
+              {
+                if (user_input != 99)
+                {
+                  std::cout << "Invalid option, please choose again.\n";
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  std::cout << "Goodbye!\n";
+  return 0;
+}
+```
