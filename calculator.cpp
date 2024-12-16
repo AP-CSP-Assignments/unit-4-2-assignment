@@ -6,9 +6,13 @@
 
 int main()
 {
-  srand(time(0));  // seeding our random number generator
+  std::srand(std::time(0));  // seeding our random number generator
 
   int user_input = 0;
+  int num1;
+  int num2;
+  int numerator;
+  int denominator;
   while (user_input != 99)
   {
     std::cout << "Welcome to C++ Calculator!  Choose an option below!\n"
@@ -25,18 +29,16 @@ int main()
     // implement calculator below
     if (user_input == 0)
     {
-      int random_number = (rand() % 6) + 1;  // random numbers between 1 and 6
+      int random_number = (std::rand() % 6) + 1;  // random numbers between 1 and 6
       std::cout << "You rolled a " << random_number << std::endl;
     }
     else
     {
       if (user_input == 1)
       {
-        int x;
-        int y;
         std::cout << "Enter two numbers\n";
-        std::cin >> x >> y;
-        std::cout << "Their sum is " << (x + y) << std::endl;
+        std::cin >> num1 >> num2;
+        std::cout << "Their sum is " << (num1 + num2) << std::endl;
       }
     }
   }
