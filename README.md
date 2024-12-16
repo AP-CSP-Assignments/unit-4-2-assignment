@@ -121,14 +121,14 @@ int main()
                 if (user_input != 99)
                 {
                   std::cout << "Invalid option, please choose again.\n";
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+                }  // end if invalid input
+              }  // end if-else choice 5
+            }  // end if-else choice 4
+          }  // end if-else choice 3
+        }  // end if-else choice 2
+      }  // end if-else choice 1
+    }  // end if-else choice 0
+  }  // end while
 
   std::cout << "Goodbye!\n";
   return 0;
