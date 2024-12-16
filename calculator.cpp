@@ -22,7 +22,7 @@ int main()
               << "3. Multiply\n"
               << "4. Divide\n"
               << "5. Square root\n"
-              << "99. Quit\n> ";
+              << "99. Quit\n\n> ";
 
     std::cin >> user_input;
     
