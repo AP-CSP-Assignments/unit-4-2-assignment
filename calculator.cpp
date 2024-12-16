@@ -11,7 +11,7 @@ int main()
   int user_input = 0;
   while (user_input != 99)
   {
-    std::cout << "Welcome to C++ Calculator!  Choose an option below!\n
+    std::cout << "Welcome to C++ Calculator!  Choose an option below!\n"
               << "0. Roll a dice\n"        
               << "1. Add\n"
               << "2. Subtract\n"
