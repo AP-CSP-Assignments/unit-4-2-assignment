@@ -105,7 +105,6 @@ int main()
             {
               if (user_input == 5)
               {
-                double num1;
                 std::cout << "Enter a number\n";
                 std::cin >> num1;
                 if (num1 < 0)
