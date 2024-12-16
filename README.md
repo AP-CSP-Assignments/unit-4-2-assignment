@@ -29,9 +29,9 @@ g++ classwork.cpp -o output
 
 # Sample Solution
 ```c++
-#include <cmath>     // abs, sqrt, pow
-#include <cstdlib>   // srand, rand
-#include <ctime>     // time
+#include <cmath>     // std::abs, std::sqrt, std::pow
+#include <cstdlib>   // std::srand, std::rand
+#include <ctime>     // std::time
 #include <iostream>  // std::cin, std::cout, std::getline
 #include <string>    // std::string
 
